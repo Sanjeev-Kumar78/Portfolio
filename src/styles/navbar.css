@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+/* CSS Variables for custom values that Tailwind doesn't cover */
+:root {
+  --navbar-bg: rgba(23, 21, 59, 0.1);
+  --navbar-border: rgba(200, 172, 214, 0.15);
+  --navbar-gradient: linear-gradient(
+    135deg,
+    rgba(200, 172, 214, 0.1) 0%,
+    rgba(67, 61, 139, 0.1) 100%
+  );
+  --navbar-gradient-active: linear-gradient(
+    135deg,
+    rgba(200, 172, 214, 0.2) 0%,
+    rgba(67, 61, 139, 0.2) 100%
+  );
+}
+
+.navbar-container {
+  @apply flex items-center justify-center w-full z-50 px-4 py-2 relative;
+  animation: fade-in-up 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar {
+  @apply flex items-center justify-center px-8 py-3;
+  @apply rounded-2xl backdrop-blur-xl backdrop-saturate-180;
+  @apply shadow-2xl transition-all duration-300 ease-out;
+  @apply hover:-translate-y-0.5 hover:shadow-xl;
+  position: static;
+  background: var(--navbar-bg);
+  border: 1px solid var(--navbar-border);
+  box-shadow: 0 8px 32px rgba(23, 21, 59, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.navbar:hover {
+  box-shadow: 0 12px 40px rgba(23, 21, 59, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.navbar-links {
+  @apply flex items-center gap-1;
+}
+
+.navbar-item {
+  @apply relative;
+}
+
+.navbar-link {
+  @apply flex items-center gap-3 px-4 py-2 rounded-xl relative overflow-hidden;
+  @apply text-sm font-medium no-underline transition-all duration-300 ease-out;
+  @apply hover:text-white hover:-translate-y-0.5 focus:outline-2 focus:outline-offset-2;
+
+  color: var(--color-primary-light);
+  focus-color: rgba(200, 172, 214, 0.5);
+}
+
+.navbar-link::before {
+  @apply absolute inset-0 rounded-xl opacity-0 -z-10 transition-opacity duration-300;
+  content: "";
+  background: var(--navbar-gradient);
+}
+
+.navbar-link:hover::before {
+  @apply opacity-100;
+}
+
+.navbar-link-icon {
+  @apply flex items-center justify-center w-5 h-5 transition-all duration-300;
+}
+
+.navbar-link:hover .navbar-link-icon {
+  @apply scale-110;
+  filter: drop-shadow(0 0 8px rgba(200, 172, 214, 0.5));
+}
+
+/* Active state */
+.navbar-link.active {
+  @apply text-white border border-purple-300/30; /* Modern Tailwind syntax */
+  background: var(--navbar-gradient-active);
+}
+
+.navbar-link.active .navbar-link-icon {
+  filter: drop-shadow(0 0 12px rgba(200, 172, 214, 0.7));
+}
+
+/* Responsive Design using standard media queries */
+@media (max-width: 768px) {
+  .navbar-container {
+    @apply px-2 py-4;
+  }
+  .navbar {
+    @apply px-4 py-2;
+  }
+  .navbar-link {
+    @apply gap-2 px-3 py-2 text-sm;
+  }
+  .navbar-links {
+    @apply gap-0;
+  }
+}
+
+/* Custom breakpoint for 425px */
+@media (max-width: 425px) {
+  .navbar-container {
+    @apply px-1 py-3;
+  }
+  .navbar {
+    @apply px-2 py-1 rounded-xl;
+  }
+  .navbar-link {
+    @apply gap-1 px-2 py-1 text-xs font-normal min-w-0 shrink;
+  }
+  .navbar-link-icon {
+    @apply w-4 h-4;
+  }
+  .navbar-links {
+    @apply gap-0;
+  }
+}
+
+@media (max-width: 320px) {
+  .navbar {
+    @apply px-1;
+  }
+  .navbar-link {
+    @apply px-1;
+    font-size: 0.55rem;
+  }
+  .navbar-link-icon {
+    @apply w-3 h-3;
+  }
+}
+
+/* Custom animations to add to Tailwind config */
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
