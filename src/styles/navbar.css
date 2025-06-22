@@ -17,18 +17,19 @@
 }
 
 .navbar-container {
-  @apply flex items-center justify-center w-full z-50 px-4 py-2 relative;
+  @apply flex items-center justify-center w-full px-4 py-2 relative;
   animation: fade-in-up 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar {
-  @apply flex items-center justify-center px-8 py-3;
+  @apply flex items-center justify-center z-50 px-8 py-3;
   @apply rounded-2xl backdrop-blur-xl backdrop-saturate-180;
   @apply shadow-2xl transition-all duration-300 ease-out;
   @apply hover:-translate-y-0.5 hover:shadow-xl;
   position: static;
   background: var(--navbar-bg);
   border: 1px solid var(--navbar-border);
+
   box-shadow: 0 8px 32px rgba(23, 21, 59, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.05);
 }
@@ -106,10 +107,10 @@
     @apply px-1 py-3;
   }
   .navbar {
-    @apply px-2 py-1 rounded-xl;
+    @apply px-2 py-3 rounded-xl;
   }
   .navbar-link {
-    @apply gap-1 px-2 py-1 text-xs font-normal min-w-0 shrink;
+    @apply gap-1 px-2 py-2 text-xs font-normal min-w-0 shrink;
   }
   .navbar-link-icon {
     @apply w-4 h-4;

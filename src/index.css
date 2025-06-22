@@ -1,11 +1,20 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Harmony";
+  src: url("./assets/fonts/HARMONY.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Primary Color Palette */
   --color-primary-darkest: #17153b;
   --color-primary-dark: #2e236c;
   --color-primary: #433d8b;
   --color-primary-light: #c8acd6;
+  --color-accent-gold: #ffc371; /* Royal Gold Accent */
 
   /* RGB Values for opacity/overlay usage */
   --color-primary-darkest-rgb: 23, 21, 59;
@@ -19,13 +28,24 @@
 }
 
 body {
-  background: linear-gradient(
-    to bottom,
-    rgba(var(--color-primary-darkest-rgb), 0.9),
-    rgba(var(--color-primary-dark-rgb), 0.9)
-  );
+  background: #0c0000;
   min-height: 100vh;
   color: var(--color-primary-light);
+  backdrop-filter: blur(10px);
   font-family: "Inter", sans-serif;
   line-height: 1.5;
+}
+
+@layer components {
+  .font-harmony {
+    font-family: "Harmony", sans-serif;
+  }
+  .text-shadow {
+    text-shadow: 0 2px 20px rgba(var(--color-primary-darkest-rgb), 0.5);
+  }
+  .highlight-text {
+    @apply relative inline-block;
+    color: var(--color-accent-gold);
+    @apply before:content-[''] before:absolute before:-inset-1 before:-skew-y-3 before:bg-gradient-to-r before:from-[#ff7eb3] before:to-[#ff65a0] before:rounded-lg before:blur-lg before:opacity-30;
+  }
 }

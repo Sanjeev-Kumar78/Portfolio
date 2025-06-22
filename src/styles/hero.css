@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+.hero-container {
+  @apply relative flex h-[90vh] w-full items-center justify-center overflow-hidden;
+  /* Ensure no content escapes the container */
+  position: relative;
+  contain: layout style paint;
+}
+
+/* --- Aurora Background --- */
+.hero-container::before,
+.hero-container::after {
+  content: "";
+  @apply absolute -z-10 h-[400px] w-[600px] rounded-full;
+  @apply md:h-[500px] md:w-[800px];
+  filter: blur(100px);
+  will-change: transform;
+}
+
+.hero-container::before {
+  background: radial-gradient(
+    circle at center,
+    rgba(var(--color-primary-rgb), 1) 0%,
+    rgba(var(--color-primary-dark-rgb), 1) 60%
+  );
+  animation: aurora-1 15s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+.hero-container::after {
+  background: radial-gradient(
+    circle at center,
+    rgba(var(--color-primary-light-rgb), 0.2) 0%,
+    rgba(var(--color-primary-darkest-rgb), 0) 70%
+  );
+  animation: aurora-2 17s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+    alternate;
+}
+
+@keyframes aurora-1 {
+  0%,
+  100% {
+    transform: translate(-10%, -10%) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(10%, 15%) rotate(180deg) scale(1.1);
+  }
+}
+
+@keyframes aurora-2 {
+  0%,
+  100% {
+    transform: translate(10%, 10%) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(-15%, -10%) rotate(-180deg) scale(0.9);
+  }
+}
+
+/* --- Hero Content --- */
+.hero-content {
+  @apply relative z-10 flex flex-col items-center text-center px-4;
+  animation: fade-in-up 1s cubic-bezier(0.4, 0, 0.2, 1) 0.5s both;
+}
+
+.hero-pre-title {
+  @apply mb-4 font-medium uppercase tracking-[0.3em] text-[rgba(var(--color-primary-light-rgb),0.8)];
+  font-size: 0.7rem; /* base size */
+}
+
+.hero-main-title {
+  font-size: 1.6rem;
+  font-family: "Harmony", sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 0 2px 20px rgba(var(--color-primary-darkest-rgb), 0.5);
+}
+
+@media (min-width: 768px) {
+  .hero-pre-title {
+    font-size: 1rem; /* sm devices */
+  }
+  .hero-main-title {
+    font-size: 2.2rem; /* md devices */
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-pre-title {
+    font-size: 1.2rem; /* lg devices */
+  }
+  .hero-main-title {
+    font-size: 4rem; /* large devices */
+  }
+}
+
+.highlight-text {
+  @apply relative inline-block;
+  color: var(--color-accent-gold);
+  min-height: 1.2em;
+}
+
+/* Typing cursor effect */
+.highlight-text::after {
+  content: "";
+  @apply absolute bottom-0 right-[-4px] top-0 w-[2px];
+  background-color: var(--color-accent-gold);
+  animation: typing-cursor 1.2s step-end infinite;
+}
+
+@keyframes typing-cursor {
+  from,
+  to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: var(--color-accent-gold);
+  }
+}
+
+/* --- General Animation --- */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
