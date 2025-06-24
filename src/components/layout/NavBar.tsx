@@ -1,10 +1,23 @@
 import { useEffect, useState } from "react";
 import { HiHome, HiFolder, HiInformationCircle, HiMail } from "react-icons/hi";
-import "../../styles/navbar.css";
+import "../../styles/NavBar.css";
 import type { ReactElement } from "react";
 
 const NavBar = () => {
   const [activeSection, setActiveSection] = useState<string>("");
+  // Function to update title based on active section
+  const updateTitle = (section: string) => {
+    const titleElement = document.querySelector("title");
+    if (titleElement) {
+      titleElement.textContent = `My Portfolio - ${
+        section.charAt(0).toUpperCase() + section.slice(1)
+      }`;
+    }
+  };
+  useEffect(() => {
+    updateTitle(activeSection);
+  }, [activeSection]);
+  // Function to handle scroll and update active section
   const handleScroll = () => {
     const sections = document.querySelectorAll("section");
     let currentSection = "home";
@@ -31,8 +44,8 @@ const NavBar = () => {
   }, []);
   const links: { name: string; href: string; icons: ReactElement }[] = [
     { name: "Home", href: "#home", icons: <HiHome /> },
-    { name: "Projects", href: "#projects", icons: <HiFolder /> },
     { name: "About", href: "#about", icons: <HiInformationCircle /> },
+    { name: "Projects", href: "#projects", icons: <HiFolder /> },
     { name: "Contact", href: "#contact", icons: <HiMail /> },
   ];
   return (

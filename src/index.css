@@ -27,6 +27,15 @@
   @apply box-border m-0 p-0;
 }
 
+html {
+  @apply scroll-smooth overflow-x-hidden;
+  scrollbar-width: thin;
+  scroll-snap-type: y mandatory;
+  scrollbar-gutter: stable;
+  scrollbar-track-color: transparent;
+  /* scrollbar-color: rgba(var(--color-primary-darkest-rgb), 0.8) transparent; */
+}
+
 body {
   background: #0c0000;
   min-height: 100vh;

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .hero-container {
-  @apply relative flex h-[90vh] w-full items-center justify-center overflow-hidden;
+  @apply relative flex h-dvh w-full items-center justify-center overflow-hidden;
   /* Ensure no content escapes the container */
   position: relative;
   contain: layout style paint;
@@ -71,7 +71,7 @@
   font-size: 1.6rem;
   font-family: "Harmony", sans-serif;
   font-weight: bold;
-  line-height: 1.2;
+  line-height: 1.5;
   color: white;
   text-shadow: 0 2px 20px rgba(var(--color-primary-darkest-rgb), 0.5);
 }
