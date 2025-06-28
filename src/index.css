@@ -30,9 +30,11 @@
 html {
   @apply scroll-smooth overflow-x-hidden;
   scrollbar-width: thin;
-  scroll-snap-type: y mandatory;
   scrollbar-gutter: stable;
   scrollbar-track-color: transparent;
+  scroll-behavior: smooth;
+  /* Prevent scroll restoration on page reload */
+  overscroll-behavior: none;
   /* scrollbar-color: rgba(var(--color-primary-darkest-rgb), 0.8) transparent; */
 }
 

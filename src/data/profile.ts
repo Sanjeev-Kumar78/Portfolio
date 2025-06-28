@@ -19,15 +19,36 @@ interface ProfileData {
     interest: string[];
   };
   skills: {
-    programmingLanguages: string[];
+    programmingLanguages: {
+      name: string;
+      icon: string;
+    }[];
     webdev: {
-      frontend: string[];
-      backend: string[];
-      databases: string[];
+      frontend: {
+        name: string;
+        icon: string;
+      }[];
+      backend: {
+        name: string;
+        icon: string;
+      }[];
+      databases: {
+        name: string;
+        icon: string;
+      }[];
     };
-    datascience: string[];
-    cloud: string[];
-    tools: string[];
+    datascience: {
+      name: string;
+      icon: string;
+    }[];
+    cloud: {
+      name: string;
+      icon: string;
+    }[];
+    tools: {
+      name: string;
+      icon: string;
+    }[];
   };
   experience: {
     company: string;
@@ -74,7 +95,7 @@ export const ProfileData: ProfileData = {
     },
   },
   about: {
-    description: "Just some text about me",
+    description: "",
     interest: [
       "Programming",
       "Web Development",
@@ -87,36 +108,126 @@ export const ProfileData: ProfileData = {
     ],
   },
   skills: {
-    programmingLanguages: ["JavaScript", "Python", "C++"],
+    programmingLanguages: [
+      {
+        name: "JavaScript",
+        icon: "devicon-javascript-plain colored",
+      },
+      {
+        name: "Python",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+      },
+      {
+        name: "C++",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
+      },
+    ],
     webdev: {
       frontend: [
-        "HTML",
-        "CSS",
-        "React",
-        "Tailwind CSS",
-        "Bootstrap",
-        // ... add more frontend skills
+        {
+          name: "HTML",
+          icon: "devicon-html5-plain",
+        },
+        {
+          name: "CSS",
+          icon: "devicon-css3-plain",
+        },
+        {
+          name: "React",
+          icon: "devicon-react-original",
+        },
+        {
+          name: "Tailwind CSS",
+          icon: "devicon-tailwindcss-original",
+        },
+        {
+          name: "Bootstrap",
+          icon: "devicon-bootstrap-plain",
+        },
       ],
       backend: [
-        "Node.js",
-        "Express.js",
-        "Django",
-        "Flask",
-        "FastAPI",
-        // ... add more backend skills
+        {
+          name: "Node.js",
+          icon: "devicon-nodejs-plain",
+        },
+        {
+          name: "Express.js",
+          icon: "devicon-express-original",
+        },
+        {
+          name: "Django",
+          icon: "devicon-django-plain",
+        },
+        {
+          name: "Flask",
+          icon: "devicon-flask-original",
+        },
+        {
+          name: "FastAPI",
+          icon: "devicon-fastapi-plain",
+        },
       ],
-      databases: ["MongoDB", "PostgreSQL", "MySQL"],
+      databases: [
+        {
+          name: "MongoDB",
+          icon: "devicon-mongodb-plain",
+        },
+        {
+          name: "PostgreSQL",
+          icon: "devicon-postgresql-plain",
+        },
+        {
+          name: "MySQL",
+          icon: "devicon-mysql-plain",
+        },
+      ],
     },
     datascience: [
-      "NumPy",
-      "Pandas",
-      "Matplotlib",
-      "Scikit-learn",
-      "TensorFlow",
-      "PyTorch",
+      {
+        name: "NumPy",
+        icon: "devicon-numpy-plain",
+      },
+      {
+        name: "Pandas",
+        icon: "devicon-pandas-plain",
+      },
+      {
+        name: "Matplotlib",
+        icon: "devicon-matplotlib-plain",
+      },
+      {
+        name: "Scikit-learn",
+        icon: "devicon-scikitlearn-plain",
+      },
+      {
+        name: "TensorFlow",
+        icon: "devicon-tensorflow-original",
+      },
+      {
+        name: "PyTorch",
+        icon: "devicon-pytorch-original",
+      },
     ],
-    cloud: ["Google Cloud Platform"],
-    tools: ["Git", "Docker", "Postman"],
+    cloud: [
+      {
+        name: "Google Cloud Platform",
+        icon: "devicon-googlecloud-plain",
+      },
+    ],
+    tools: [
+      {
+        name: "Git",
+        icon: "devicon-git-plain",
+      },
+      {
+        name: "Docker",
+        icon: "devicon-docker-plain",
+      },
+      {
+        name: "Postman",
+        icon: "devicon-postman-plain",
+      },
+    ],
   },
   experience: [
     // Example experience entry

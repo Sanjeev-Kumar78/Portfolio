@@ -53,7 +53,12 @@ const NavBar = () => {
       <nav className="navbar">
         <ul className="navbar-links">
           {links.map((link) => (
-            <li key={link.name} className="navbar-item">
+            <li
+              title={link.name}
+              aria-label={link.name}
+              key={link.name}
+              className="navbar-item"
+            >
               <a
                 className={`navbar-link ${
                   activeSection === link.name.toLowerCase() ? "active" : ""
