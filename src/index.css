@@ -60,3 +60,7 @@ body {
     @apply before:content-[''] before:absolute before:-inset-1 before:-skew-y-3 before:bg-gradient-to-r before:from-[#ff7eb3] before:to-[#ff65a0] before:rounded-lg before:blur-lg before:opacity-30;
   }
 }
+
+.section-title {
+  color: white !important;
+}

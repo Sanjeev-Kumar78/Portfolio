@@ -1,7 +1,4 @@
-﻿/* =========================
-   OPTIMIZED ABOUT PAGE STYLES
-   ========================= */
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 /* CSS Variables for common values */
 :root {
@@ -34,8 +31,9 @@
 
 /* Main Container */
 .about-container {
-  @apply min-h-screen text-white relative overflow-hidden px-4 py-16 md:py-20;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 50%, #16213e 100%);
+  @apply min-h-[100dvh] max-h-max text-white relative overflow-hidden px-4 py-16 md:py-20;
+  background: 
+    linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 30%, #16213e 60%, #2d1b3d 80%, #1a0a1a 100%);
 }
 
 .about-container::before {
@@ -182,7 +180,7 @@
 
 /* Skills Section */
 .skills-section {
-  @apply max-w-7xl mx-auto relative z-10;
+  @apply max-h-max max-w-7xl mx-auto relative z-10;
 }
 
 .skills-header {
@@ -201,9 +199,14 @@
   @apply text-lg text-gray-400 max-w-2xl mx-auto;
 }
 
-/* Desktop Skills Container */
-.skills-container.desktop {
-  @apply relative;
+/* Sticky wrapper for horizontal scrolling categories */
+.skills-scroll-section .skills-scroll-wrapper {
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 .skills-scroll-wrapper {
@@ -222,6 +225,11 @@
     black 95%,
     transparent 100%
   );
+}
+
+/* Desktop Skills Container */
+.skills-container.desktop {
+  @apply relative;
 }
 
 .skills-categories {
@@ -320,198 +328,8 @@
   @apply text-sm font-medium relative z-10 break-words leading-tight;
 }
 
-/* Enhanced Mobile Carousel Styles */
-.skills-container.mobile {
-  @apply relative;
-}
-
-.carousel-wrapper {
-  @apply relative w-full flex items-center justify-center;
-  padding: 0 4rem; /* Add padding for buttons */
-}
-
-/* Improved Navigation Buttons */
-.carousel-btn {
-  @apply absolute z-20 w-12 h-12 text-xl rounded-full flex items-center justify-center text-white font-bold transition-all duration-300 cursor-pointer select-none;
-  background: var(--gradient-purple-blue);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: var(--backdrop-blur);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(124, 58, 237, 0.3);
-}
-
-.carousel-btn:hover {
-  @apply scale-110;
-  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.5), 0 0 30px rgba(124, 58, 237, 0.4);
-  background: linear-gradient(135deg, var(--purple-secondary) 0%, var(--blue-primary) 100%);
-}
-
-.carousel-btn:active {
-  @apply scale-95;
-}
-
-.carousel-btn.prev {
-  @apply left-4; /* Position inside padding */
-}
-
-.carousel-btn.next {
-  @apply right-4; /* Position inside padding */
-}
-
-/* Enhanced Carousel Content */
-.carousel-content {
-  @apply overflow-hidden rounded-2xl w-full; /* Remove fixed margin/width */
-  max-width: 450px;
-  margin: 0 auto;
-  touch-action: pan-x;
-}
-
-.carousel-track {
-  @apply grid transition-transform duration-500 ease-out;
-  grid-auto-flow: column;
-  grid-auto-columns: 100%;
-  will-change: transform;
-}
-
-.carousel-slide {
-  @apply w-full;
-}
-
-/* Enhanced Mobile Skills Category */
-.skills-category.mobile {
-  @apply rounded-3xl backdrop-blur-3xl relative overflow-hidden w-full;
-  max-width: 480px;
-  margin: 0 auto;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.15) 0%,
-    rgba(255, 255, 255, 0.08) 100%
-  );
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 6vw 4vw;
-  min-height: 65vh;
-  max-height: 75vh;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3), 0 0 60px rgba(139, 92, 246, 0.1);
-}
-
-.skills-category.mobile::before {
-  @apply absolute top-0 left-0 right-0;
-  content: "";
-  height: 4px;
-  background: linear-gradient(90deg, #8b5cf6, #3b82f6, #ec4899, #8b5cf6);
-  background-size: 200% 100%;
-  animation: gradientFlow 4s ease-in-out infinite;
-}
-
-@keyframes gradientFlow {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-/* Enhanced Mobile Skills List */
-.skills-list.mobile {
-  @apply grid gap-4;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-}
-
-.skill-item.mobile {
-  @apply flex flex-col items-center justify-center text-center p-4 rounded-2xl transition-all duration-300 min-h-[110px];
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(255, 255, 255, 0.08) 100%
-  );
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(15px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.skill-item.mobile:hover {
-  @apply scale-105;
-  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.4);
-  border-color: rgba(139, 92, 246, 0.5);
-  background: linear-gradient(
-    135deg,
-    rgba(139, 92, 246, 0.2) 0%,
-    rgba(59, 130, 246, 0.15) 100%
-  );
-}
-
-.skill-item.mobile .skill-icon {
-  @apply text-3xl mb-2 transition-transform duration-300;
-}
-
-.skill-item.mobile:hover .skill-icon {
-  transform: scale(1.1);
-}
-
-.skill-item.mobile .skill-name {
-  @apply text-sm font-medium text-center;
-}
-
-/* Enhanced Carousel Indicators */
-.carousel-indicators {
-  @apply flex justify-center gap-3 mt-8;
-}
-
-.indicator {
-  @apply rounded-full transition-all duration-300 border-none cursor-pointer relative overflow-hidden;
-  width: 12px;
-  height: 12px;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-}
-
-.indicator::before {
-  @apply absolute inset-0 rounded-full opacity-0 transition-opacity duration-300;
-  content: "";
-  background: linear-gradient(45deg, #a855f7, #3b82f6);
-}
-
-.indicator:hover::before {
-  @apply opacity-50;
-}
-
-.indicator.active {
-  @apply w-10;
-  background: linear-gradient(45deg, #a855f7, #3b82f6);
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.8),
-    0 4px 15px rgba(139, 92, 246, 0.4);
-}
-
-.indicator.active::before {
-  @apply opacity-0;
-}
-
-/* Enhanced Auto-play Toggle */
-.autoplay-toggle {
-  @apply fixed bottom-6 right-6 w-14 h-14 text-lg z-30 rounded-full flex items-center justify-center text-white font-bold transition-all duration-300 cursor-pointer select-none;
-  background: var(--gradient-purple-blue);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: var(--backdrop-blur);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(124, 58, 237, 0.3);
-}
-
-.autoplay-toggle:hover {
-  @apply scale-110;
-  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.5), 0 0 30px rgba(124, 58, 237, 0.4);
-  background: linear-gradient(135deg, var(--purple-secondary) 0%, var(--blue-primary) 100%);
-}
-
-.autoplay-toggle:active {
-  @apply scale-95;
-}
-
 /* Responsive Design with Enhanced Mobile Experience */
 @media (max-width: 767px) {
-  .carousel-wrapper {
-    @apply px-12;
-  }
-
   .about-container {
     @apply px-3 py-12;
   }
@@ -531,36 +349,16 @@
   .category-title {
     @apply text-lg;
   }
-
-  .skills-category.mobile {
-    padding: 8vw 5vw;
-    min-height: 40vh;
-    max-height: max-content;
-  }
-
-  .skill-item.mobile {
-    @apply p-3 min-h-[100px];
-  }
-
-  .skill-item.mobile .skill-icon {
-    @apply text-2xl;
-  }
-
-  .skill-item.mobile .skill-name {
-    @apply text-xs;
-  }
 }
 
 /* Small devices improvements */
 @media (min-width: 480px) and (max-width: 767px) {
-  .carousel-content {
-    @apply w-[80vw] max-w-[85vw];
-  }
-
   .skills-category.mobile {
     padding: 5vw 4vw;
     min-height: 30vh;
     max-height: max-content;
+    touch-action: pan-x;
+    overscroll-behavior-y: contain;
   }
 
   .skills-list.mobile {
@@ -570,11 +368,6 @@
 
 /* Medium devices */
 @media (min-width: 768px) and (max-width: 1023px) {
-  .carousel-content {
-    @apply w-[70vw];
-    max-width: 600px;
-  }
-
   .skills-category.mobile {
     padding: 3vw 2.5vw;
     min-height: 55vh;
@@ -604,16 +397,8 @@
   }
 }
 
-/* Very small devices - hide navigation buttons and optimize space */
+/* Very small devices - optimize space */
 @media (max-width: 479px) {
-  .carousel-btn {
-    @apply hidden;
-  }
-
-  .carousel-wrapper {
-    padding: 0; /* Remove padding when buttons are hidden */
-  }
-
   .carousel-content {
     @apply w-full rounded-none;
   }
@@ -631,10 +416,6 @@
 
   .skill-item.mobile {
     @apply p-2 min-h-[90px];
-  }
-
-  .autoplay-toggle {
-    @apply w-12 h-12 bottom-4 right-4 text-base;
   }
 
   .carousel-indicators {
@@ -728,8 +509,7 @@
 
 /* Focus states for accessibility */
 .carousel-btn:focus,
-.indicator:focus,
-.autoplay-toggle:focus {
+.indicator:focus {
   @apply outline-none ring-2 ring-purple-400 ring-offset-2 ring-offset-gray-900;
 }
 

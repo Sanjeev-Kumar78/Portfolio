@@ -81,14 +81,15 @@ interface ProfileData {
 export const ProfileData: ProfileData = {
   personal: {
     name: "John Doe",
-    title: "Software Engineer",
+    title: "",
     tagline: "Building innovative solutions with code",
     location: "N/A",
     photoUrl: "https://example.com/photo.jpg",
+    // if changed needs to add a icon in Contact.tsx
     contact: {
       email: "john.doe@example.com",
       website: "https://johndoe.com",
-      linkedin: "https://linkedin.com/in/johndoe",
+      linkedin: "https://www.linkedin.com/in/johndoe",
       github: "https://www.github.com/johndoe",
       telegram: "https://t.me/johndoe",
       discord: "https://discord.com/users/johndoe",
@@ -100,11 +101,8 @@ export const ProfileData: ProfileData = {
       "Programming",
       "Web Development",
       "Open Source",
-      "Machine Learning",
       "Cloud Computing",
-      "Artificial Intelligence",
       "Data Science",
-      "Cyber Security",
     ],
   },
   skills: {
@@ -126,29 +124,29 @@ export const ProfileData: ProfileData = {
       frontend: [
         {
           name: "HTML",
-          icon: "devicon-html5-plain",
+          icon: "devicon-html5-plain colored",
         },
         {
           name: "CSS",
-          icon: "devicon-css3-plain",
+          icon: "devicon-css3-plain colored",
         },
         {
           name: "React",
-          icon: "devicon-react-original",
+          icon: "devicon-react-original colored",
         },
         {
           name: "Tailwind CSS",
-          icon: "devicon-tailwindcss-original",
+          icon: "devicon-tailwindcss-original colored",
         },
         {
           name: "Bootstrap",
-          icon: "devicon-bootstrap-plain",
+          icon: "devicon-bootstrap-plain colored",
         },
       ],
       backend: [
         {
           name: "Node.js",
-          icon: "devicon-nodejs-plain",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg",
         },
         {
           name: "Express.js",
@@ -156,21 +154,21 @@ export const ProfileData: ProfileData = {
         },
         {
           name: "Django",
-          icon: "devicon-django-plain",
+          icon: "devicon-django-plain colored",
         },
         {
           name: "Flask",
-          icon: "devicon-flask-original",
+          icon: "devicon-flask-original colored",
         },
         {
           name: "FastAPI",
-          icon: "devicon-fastapi-plain",
+          icon: "devicon-fastapi-plain colored",
         },
       ],
       databases: [
         {
           name: "MongoDB",
-          icon: "devicon-mongodb-plain",
+          icon: "devicon-mongodb-plain colored",
         },
         {
           name: "PostgreSQL",
@@ -185,11 +183,11 @@ export const ProfileData: ProfileData = {
     datascience: [
       {
         name: "NumPy",
-        icon: "devicon-numpy-plain",
+        icon: "devicon-numpy-plain colored",
       },
       {
         name: "Pandas",
-        icon: "devicon-pandas-plain",
+        icon: "devicon-pandas-plain colored",
       },
       {
         name: "Matplotlib",
@@ -197,35 +195,35 @@ export const ProfileData: ProfileData = {
       },
       {
         name: "Scikit-learn",
-        icon: "devicon-scikitlearn-plain",
+        icon: "devicon-scikitlearn-plain colored",
       },
       {
         name: "TensorFlow",
-        icon: "devicon-tensorflow-original",
+        icon: "devicon-tensorflow-original colored",
       },
       {
         name: "PyTorch",
-        icon: "devicon-pytorch-original",
+        icon: "devicon-pytorch-original colored",
       },
     ],
     cloud: [
       {
         name: "Google Cloud Platform",
-        icon: "devicon-googlecloud-plain",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg ",
       },
     ],
     tools: [
       {
         name: "Git",
-        icon: "devicon-git-plain",
+        icon: "devicon-git-plain colored",
       },
       {
         name: "Docker",
-        icon: "devicon-docker-plain",
+        icon: "devicon-docker-plain colored",
       },
       {
         name: "Postman",
-        icon: "devicon-postman-plain",
+        icon: "devicon-postman-plain colored",
       },
     ],
   },
@@ -257,12 +255,25 @@ export const ProfileData: ProfileData = {
       title: "Portfolio Website",
       description:
         "A personal portfolio website to showcase my projects and skills.",
-      imageUrl: "https://example.com/portfolio.jpg",
+      imageUrl:
+        "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
       liveUrl: "https://johndoe.com/portfolio",
       sourceUrl: "https://github.com/johndoe/portfolio",
       skillsUsed: ["TypeScript", "React", "Tailwind CSS"],
       projectdomain: "Web Development",
       status: "Completed",
+    },
+    {
+      title: "E-commerce Platform",
+      description:
+        "An e-commerce platform built with React and Node.js, featuring product listings, user authentication, and payment integration.",
+      imageUrl:
+        "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg",
+      liveUrl: "https://johndoe.com/ecommerce",
+      sourceUrl: "https://github.com/johndoe/ecommerce",
+      skillsUsed: ["TypeScript", "React", "Node.js", "Express.js"],
+      projectdomain: "Web Development",
+      status: "In Progress",
     },
   ],
 };

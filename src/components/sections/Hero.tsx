@@ -39,7 +39,7 @@ const Hero = () => {
     <section id="home" className="hero-container">
       <div className="hero-content">
         <p className="hero-pre-title">HELLO & WELCOME</p>
-        <h1 className="hero-main-title font-harmony">
+        <h1 className="hero-main-title">
           I'm {ProfileData.personal.name}.
           <br />I love <span className="highlight-text">{currentText}</span>
         </h1>

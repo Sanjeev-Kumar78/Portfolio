@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 .hero-container {
   @apply relative flex h-dvh w-full items-center justify-center overflow-hidden;
   /* Ensure no content escapes the container */
@@ -68,7 +67,7 @@
 }
 
 .hero-main-title {
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-family: "Harmony", sans-serif;
   font-weight: bold;
   line-height: 1.5;
