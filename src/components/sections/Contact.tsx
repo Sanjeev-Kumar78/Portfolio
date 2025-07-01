@@ -190,7 +190,7 @@ const Contact = () => {
               title="Sponsor Sanjeev-Kumar78"
               height="32"
               width="114"
-              style="border: 0; border-radius: 6px;"
+              style={{ border: "0", borderRadius: "6px" }}
             ></iframe>
           </div>
         </div>
