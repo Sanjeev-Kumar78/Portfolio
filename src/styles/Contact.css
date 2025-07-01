@@ -88,7 +88,7 @@
 }
 
 .submit-button {
-  @apply mt-4 py-3 px-6 rounded-lg font-medium text-white;
+  @apply mt-4 py-3 px-6 rounded-lg font-medium text-white cursor-pointer;
   background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
   transition: all 0.3s ease;
   position: relative;
