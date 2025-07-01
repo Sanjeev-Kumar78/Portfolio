@@ -267,7 +267,7 @@ export const ProfileData: ProfileData = {
       title: "Portfolio Website",
       description:
         "A personal portfolio website to showcase my projects and skills.",
-      imageUrl: "",
+      imageUrl: "/Projects_Banner/Portfolio.webp",
       liveUrl: "https://sanjeev-kumar78.vercel.app",
       sourceUrl: "https://github.com/Sanjeev-Kumar78/portfolio",
       skillsUsed: ["TypeScript", "React", "Tailwind CSS"],
@@ -278,7 +278,8 @@ export const ProfileData: ProfileData = {
       title: "Travel Itinerary Generator",
       description:
         "A web application that generates travel itineraries based on user preferences along with the weather information.",
-      imageUrl: "",
+      imageUrl:
+        "https://media.licdn.com/dms/image/v2/D4D2DAQG8HqC2rUegYg/profile-treasury-image-shrink_1920_1920/profile-treasury-image-shrink_1920_1920/0/1700846192738?e=1751950800&v=beta&t=4ww-reNBXKj2B3o5xfBDdN6I7VPV73gmG7LbhpOMKW0",
       liveUrl: "https://sanjeev02.pythonanywhere.com/",
       sourceUrl:
         "https://github.com/Sanjeev-Kumar78/travel-itinerary-generator",
@@ -290,7 +291,7 @@ export const ProfileData: ProfileData = {
       title: "Weather Trend Analyzer",
       description:
         "Data visualization platform for weather patterns using Python libraries. Implemented caching to reduce API calls by 60%.",
-      imageUrl: "",
+      imageUrl: "/Projects_Banner/Weather_Trend_Analyzer.webp",
       liveUrl: "https://weathertrendanalyzer.streamlit.app/",
       sourceUrl: "https://github.com/Sanjeev-Kumar78/Weather_Trend_Analyzer",
       skillsUsed: ["Python", "Matplotlib", "Pandas", "NumPy", "Streamlit"],
@@ -301,7 +302,7 @@ export const ProfileData: ProfileData = {
       title: "Object Detection",
       description:
         "An advanced object recognition project using Python and OpenCV with YOLO. It features object-detection in images, custom object training, and initial models for various applications.",
-      imageUrl: "",
+      imageUrl: "/Projects_Banner/Object_Detection.webp",
       liveUrl:
         "https://object-detection-yolov10.streamlit.app/?embed_options=dark_theme",
       sourceUrl: "https://github.com/Sanjeev-Kumar78/Object-Detection",
@@ -313,7 +314,8 @@ export const ProfileData: ProfileData = {
       title: "Book Recommendation System",
       description:
         "This is a book recommendation system based on the book rating data from GoodReads_100k dataset. The dataset contains 100k book. Used Tf-idf vectorization and cosine similarity to recommend books based on user choice.",
-      imageUrl: "",
+      imageUrl:
+        "https://media.licdn.com/dms/image/sync/v2/D4D27AQGC3JrETrA5fw/articleshare-shrink_800/articleshare-shrink_800/0/1744737809182?e=1751950800&v=beta&t=u4uvHQX3QTuM1oDn7H0qp2DYQePE2vVlroVMORxfKKc",
       liveUrl: "https://recommendation-book.streamlit.app/",
       sourceUrl:
         "https://github.com/Sanjeev-Kumar78/Book-Recommendation-System",
