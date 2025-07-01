@@ -96,7 +96,7 @@ export const ProfileData: ProfileData = {
     },
   },
   about: {
-    description: `A student of Computer Science Engineering (CGPA 9.0) at KIIT who has experience in AI, machine learning, and work on full-stack development. I develop elastic applications that cause real difference:
+    description: `I am a Computer Science Engineering student (CGPA 9.0) at KIIT who has experience in AI, machine learning, and work on full-stack development. I develop scalable applications that solve real-world problems and deliver tangible results. My work includes projects like:
 
 > Travel Itinerary Generator: 100 + monthly visitors
 > Book Recommendation System: A web application that recommends books based on user choice.
@@ -118,6 +118,10 @@ export const ProfileData: ProfileData = {
       {
         name: "JavaScript",
         icon: "devicon-javascript-plain colored",
+      },
+      {
+        name: "TypeScript",
+        icon: "devicon-typescript-plain colored",
       },
       {
         name: "Python",
@@ -283,7 +287,15 @@ export const ProfileData: ProfileData = {
       liveUrl: "https://sanjeev02.pythonanywhere.com/",
       sourceUrl:
         "https://github.com/Sanjeev-Kumar78/travel-itinerary-generator",
-      skillsUsed: ["TypeScript", "React", "Node.js", "Express.js"],
+      skillsUsed: [
+        "Flask",
+        "Python",
+        "MySQL",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+      ],
       projectdomain: "Web Development & AI",
       status: "In Progress",
     },
