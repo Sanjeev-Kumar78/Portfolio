@@ -304,7 +304,7 @@
 .project-domain {
   @apply rounded-md border transition-all duration-300;
   background: rgba(168, 85, 247, 0.1);
-  color: #c084fc;
+  color: #d7cae4;
   border-color: rgba(168, 85, 247, 0.25);
 }
 
@@ -329,12 +329,12 @@
 
 .project-status-badge {
   @apply flex items-center gap-2 text-sm font-medium;
-  color: #c084fc;
+  color: #babafc;
 }
 
 .project-domain {
   @apply text-xs px-2 py-1;
-  color: rgba(168, 85, 247, 0.8);
+  color: rgba(163, 239, 51, 0.8);
 }
 
 /* Responsive improvements */

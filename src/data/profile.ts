@@ -80,23 +80,31 @@ interface ProfileData {
 
 export const ProfileData: ProfileData = {
   personal: {
-    name: "John Doe",
+    name: "Sanjeev Kumar",
     title: "",
     tagline: "Building innovative solutions with code",
     location: "N/A",
     photoUrl: "https://example.com/photo.jpg",
     // if changed needs to add a icon in Contact.tsx
     contact: {
-      email: "john.doe@example.com",
-      website: "https://johndoe.com",
-      linkedin: "https://www.linkedin.com/in/johndoe",
-      github: "https://www.github.com/johndoe",
-      telegram: "https://t.me/johndoe",
-      discord: "https://discord.com/users/johndoe",
+      email: "sanjeev-kumar78@outlook.com",
+      website: "https://sanjeev-kumar78.vercel.app",
+      linkedin: "https://www.linkedin.com/in/sanjeev-kumar78",
+      github: "https://www.github.com/Sanjeev-Kumar78",
+      telegram: "https://t.me/sanjeev032",
+      discord: "https://discord.com/users/sanjeevkumar78",
     },
   },
   about: {
-    description: "",
+    description: `A student of Computer Science Engineering (CGPA 9.0) at KIIT who has experience in AI, machine learning, and work on full-stack development. I develop elastic applications that cause real difference:
+
+> Travel Itinerary Generator: 100 + monthly visitors
+> Book Recommendation System: A web application that recommends books based on user choice.
+> Weather Trend Analyzer: The service is a platform that visualizes real-time information.
+
+    Got direct experience with open source by actively participating in Hacktoberfest 2022 and 2024 and GirlScript Summer of Code 2024. Passionate open-source developer with a track record of working collaboratively, bug fixes, documentation and code review.
+
+    Energetic to develop AI based solutions which provide a practical solution to real world problems and deliver quantifiable business results. My vision is to attain optimal solutions of real-life problems using innovative technology.`,
     interest: [
       "Programming",
       "Web Development",
@@ -218,6 +226,10 @@ export const ProfileData: ProfileData = {
         icon: "devicon-git-plain colored",
       },
       {
+        name: "Github",
+        icon: "devicon-github-original colored",
+      },
+      {
         name: "Docker",
         icon: "devicon-docker-plain colored",
       },
@@ -255,25 +267,59 @@ export const ProfileData: ProfileData = {
       title: "Portfolio Website",
       description:
         "A personal portfolio website to showcase my projects and skills.",
-      imageUrl:
-        "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
-      liveUrl: "https://johndoe.com/portfolio",
-      sourceUrl: "https://github.com/johndoe/portfolio",
+      imageUrl: "",
+      liveUrl: "https://sanjeev-kumar78.vercel.app",
+      sourceUrl: "https://github.com/Sanjeev-Kumar78/portfolio",
       skillsUsed: ["TypeScript", "React", "Tailwind CSS"],
       projectdomain: "Web Development",
       status: "Completed",
     },
     {
-      title: "E-commerce Platform",
+      title: "Travel Itinerary Generator",
       description:
-        "An e-commerce platform built with React and Node.js, featuring product listings, user authentication, and payment integration.",
-      imageUrl:
-        "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg",
-      liveUrl: "https://johndoe.com/ecommerce",
-      sourceUrl: "https://github.com/johndoe/ecommerce",
+        "A web application that generates travel itineraries based on user preferences along with the weather information.",
+      imageUrl: "",
+      liveUrl: "https://sanjeev02.pythonanywhere.com/",
+      sourceUrl:
+        "https://github.com/Sanjeev-Kumar78/travel-itinerary-generator",
       skillsUsed: ["TypeScript", "React", "Node.js", "Express.js"],
-      projectdomain: "Web Development",
+      projectdomain: "Web Development & AI",
       status: "In Progress",
+    },
+    {
+      title: "Weather Trend Analyzer",
+      description:
+        "Data visualization platform for weather patterns using Python libraries. Implemented caching to reduce API calls by 60%.",
+      imageUrl: "",
+      liveUrl: "https://weathertrendanalyzer.streamlit.app/",
+      sourceUrl: "https://github.com/Sanjeev-Kumar78/Weather_Trend_Analyzer",
+      skillsUsed: ["Python", "Matplotlib", "Pandas", "NumPy", "Streamlit"],
+      projectdomain: "Data Analysis",
+      status: "Completed",
+    },
+    {
+      title: "Object Detection",
+      description:
+        "An advanced object recognition project using Python and OpenCV with YOLO. It features object-detection in images, custom object training, and initial models for various applications.",
+      imageUrl: "",
+      liveUrl:
+        "https://object-detection-yolov10.streamlit.app/?embed_options=dark_theme",
+      sourceUrl: "https://github.com/Sanjeev-Kumar78/Object-Detection",
+      skillsUsed: ["Python", "YOLO", "Streamlit"],
+      projectdomain: "Machine Learning",
+      status: "Completed",
+    },
+    {
+      title: "Book Recommendation System",
+      description:
+        "This is a book recommendation system based on the book rating data from GoodReads_100k dataset. The dataset contains 100k book. Used Tf-idf vectorization and cosine similarity to recommend books based on user choice.",
+      imageUrl: "",
+      liveUrl: "https://recommendation-book.streamlit.app/",
+      sourceUrl:
+        "https://github.com/Sanjeev-Kumar78/Book-Recommendation-System",
+      skillsUsed: ["Python", "Pandas", "NumPy", "Scikit-learn", "Streamlit"],
+      projectdomain: "Machine Learning",
+      status: "Completed",
     },
   ],
 };

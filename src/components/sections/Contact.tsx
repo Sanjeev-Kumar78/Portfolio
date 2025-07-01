@@ -5,6 +5,7 @@ import SocialButton from "../ui/SocialButton";
 import { HiOutlineEnvelope, HiOutlineGlobeAlt } from "react-icons/hi2";
 import { FaLinkedin, FaGithub, FaTelegram, FaDiscord } from "react-icons/fa";
 import "../../styles/Contact.css";
+import LaptopBoy from "../../assets/images/projects/laptop_boy.webp";
 
 // Define the type for the form data
 type FormData = {
@@ -165,6 +166,13 @@ const Contact = () => {
           </button>
         </form>
         <div className="social-links">
+          <div className="laptop-boy">
+            <img
+              src={LaptopBoy}
+              alt="Laptop Boy"
+              className="laptop-boy-image"
+            />
+          </div>
           <p className="social-links-text">
             You can also find me on these platforms:
           </p>

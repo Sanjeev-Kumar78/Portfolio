@@ -62,10 +62,53 @@ const About = () => {
 
         <div className="about-info">
           <div className="about-text">
-            <p className="about-description">
-              {ProfileData.about.description ||
-                "I am a passionate developer with a keen interest in creating innovative solutions. My journey in technology has been driven by curiosity and a desire to learn continuously. I enjoy tackling challenges and believe in the power of collaboration to achieve great results."}
-            </p>
+            <div className="about-description">
+              {ProfileData.about.description ? (
+                ProfileData.about.description
+                  .split("\n\n")
+                  .map((paragraph, index) => {
+                    // Check if paragraph contains bullet points
+                    if (paragraph.includes("> ")) {
+                      const lines = paragraph.split("\n");
+                      return (
+                        <div key={index} className="paragraph-with-bullets">
+                          {lines.map((line, lineIndex) => {
+                            if (line.startsWith("> ")) {
+                              return (
+                                <li key={lineIndex} className="bullet-item">
+                                  {line.substring(2)}
+                                </li>
+                              );
+                            } else if (line.trim()) {
+                              return (
+                                <p key={lineIndex} className="paragraph-text">
+                                  {line}
+                                </p>
+                              );
+                            }
+                            return null;
+                          })}
+                        </div>
+                      );
+                    } else {
+                      // Regular paragraph
+                      return (
+                        <p key={index} className="paragraph-text">
+                          {paragraph}
+                        </p>
+                      );
+                    }
+                  })
+              ) : (
+                <p className="paragraph-text">
+                  I am a passionate developer with a keen interest in creating
+                  innovative solutions. My journey in technology has been driven
+                  by curiosity and a desire to learn continuously. I enjoy
+                  tackling challenges and believe in the power of collaboration
+                  to achieve great results.
+                </p>
+              )}
+            </div>
 
             {ProfileData.about.interest &&
               ProfileData.about.interest.length > 0 && (

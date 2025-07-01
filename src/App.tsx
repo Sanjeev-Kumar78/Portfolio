@@ -6,10 +6,12 @@ import ArrowUp from "./components/ui/ArrowUp";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/layout/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   return (
     <div>
+      <Analytics />
       <SpeedInsights />
       <NavBar />
       <main>

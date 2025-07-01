@@ -128,3 +128,50 @@
     transform: translateY(0);
   }
 }
+
+/* --- Call to Action Buttons --- */
+.hero-cta {
+  @apply mt-8 flex flex-col gap-4 sm:flex-row sm:gap-6;
+  animation: fade-in-up 1s cubic-bezier(0.4, 0, 0.2, 1) 0.8s both;
+}
+
+.hero-cta button {
+  @apply min-w-[160px] px-6 py-3 text-sm font-medium transition-all duration-300;
+  @apply sm:px-8 sm:py-4 sm:text-base;
+  border-radius: 8px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.hero-cta button:hover {
+  transform: translateY(-1px);
+}
+
+/* Primary CTA Button - Professional Blue */
+.hero-cta button:first-child {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.hero-cta button:first-child:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+/* Secondary CTA Button - Professional Outline */
+.hero-cta button:last-child {
+  background: #2514debf;
+  border-color: rgba(37, 99, 235, 0.4);
+  color: #3b82f6;
+  backdrop-filter: blur(8px);
+}
+
+.hero-cta button:last-child:hover {
+  background: rgba(37, 99, 235, 0.15);
+  border-color: #2563eb;
+  color: #2563eb;
+}

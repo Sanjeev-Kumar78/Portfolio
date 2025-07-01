@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 import "../../styles/Hero.css";
 import { ProfileData } from "../../data/profile";
+import Button from "../ui/Button";
 
 const Hero = () => {
   const [currentText, setCurrentText] = useState("");
@@ -46,6 +47,12 @@ const Hero = () => {
         <p className="pt-1 text-xs text-wrap md:text-sm">
           {ProfileData.personal.tagline}
         </p>
+
+        {/* Call to Action Buttons */}
+        <div className="hero-cta">
+          <Button text="Explore My Projects" link="#projects" />
+          <Button text="Let's Connect" link="#contact" />
+        </div>
       </div>
     </section>
   );
