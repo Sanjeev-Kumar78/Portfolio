@@ -15,7 +15,7 @@ const App = () => {
     "beforeend",
     `<meta
         name="google-site-verification"
-        content="${import.meta.env.VITE_GOOGLE_SITE_VERIFICATION || ""}"
+        content="${import.meta.env.GOOGLE_SITE_VERIFICATION || ""}"
       />`
   );
   return (
