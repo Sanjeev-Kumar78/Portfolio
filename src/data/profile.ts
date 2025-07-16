@@ -297,7 +297,7 @@ export const ProfileData: ProfileData = {
         "Bootstrap",
       ],
       projectdomain: "Web Development & AI",
-      status: "In Progress",
+      status: "Completed",
     },
     {
       title: "Weather Trend Analyzer",
