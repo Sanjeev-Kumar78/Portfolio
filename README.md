@@ -100,7 +100,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🙏 Acknowledgments
 
-- Icons provided by [React Icons](https://react-icons.github.io/react-icons/)
+- Icons provided by [React Icons](https://react-icons.github.io/react-icons/) & [Devicon](https://devicon.dev/)
 - Fonts and styling powered by [Tailwind CSS](https://tailwindcss.com/)
 - Deployed on [Vercel](https://vercel.com/)
 - Email service by [EmailJS](https://www.emailjs.com/)
