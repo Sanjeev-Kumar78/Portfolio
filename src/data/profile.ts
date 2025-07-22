@@ -282,8 +282,7 @@ export const ProfileData: ProfileData = {
       title: "Travel Itinerary Generator",
       description:
         "A web application that generates travel itineraries based on user preferences along with the weather information.",
-      imageUrl:
-        "https://media.licdn.com/dms/image/v2/D4D2DAQG8HqC2rUegYg/profile-treasury-image-shrink_1920_1920/profile-treasury-image-shrink_1920_1920/0/1700846192738?e=1751950800&v=beta&t=4ww-reNBXKj2B3o5xfBDdN6I7VPV73gmG7LbhpOMKW0",
+      imageUrl: "/Projects_Banner/Travel_Itinerary.jpg",
       liveUrl: "https://sanjeev02.pythonanywhere.com/",
       sourceUrl:
         "https://github.com/Sanjeev-Kumar78/travel-itinerary-generator",
@@ -326,8 +325,7 @@ export const ProfileData: ProfileData = {
       title: "Book Recommendation System",
       description:
         "This is a book recommendation system based on the book rating data from GoodReads_100k dataset. The dataset contains 100k book. Used Tf-idf vectorization and cosine similarity to recommend books based on user choice.",
-      imageUrl:
-        "https://media.licdn.com/dms/image/sync/v2/D4D27AQGC3JrETrA5fw/articleshare-shrink_800/articleshare-shrink_800/0/1744737809182?e=1751950800&v=beta&t=u4uvHQX3QTuM1oDn7H0qp2DYQePE2vVlroVMORxfKKc",
+      imageUrl: "/Projects_Banner/Book_Recommendation.png",
       liveUrl: "https://recommendation-book.streamlit.app/",
       sourceUrl:
         "https://github.com/Sanjeev-Kumar78/Book-Recommendation-System",
