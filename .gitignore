@@ -12,6 +12,12 @@ dist
 dist-ssr
 *.local
 
+# Packages
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+lerna-debug.log
+
 # Environment variables
 .env
 .env.local
