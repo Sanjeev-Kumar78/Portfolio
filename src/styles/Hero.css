@@ -58,7 +58,9 @@
 /* --- Hero Content --- */
 .hero-content {
   @apply relative z-10 flex flex-col items-center text-center px-4;
-  animation: fade-in-up 1s cubic-bezier(0.4, 0, 0.2, 1) 0.5s both;
+  opacity: 1;
+  transform: translateY(0);
+  animation: fade-in-up 1s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
 }
 
 .hero-pre-title {
@@ -68,11 +70,13 @@
 
 .hero-main-title {
   font-size: 2rem;
-  font-family: "Harmony", sans-serif;
+  font-family: "Harmony", -apple-system, sans-serif;
   font-weight: bold;
   line-height: 1.5;
   color: white;
   text-shadow: 0 2px 20px rgba(var(--color-primary-darkest-rgb), 0.5);
+  contain: content layout style paint;
+  will-change: auto;
 }
 
 @media (min-width: 768px) {
