@@ -153,12 +153,30 @@ const Contact = () => {
       </div>
       <div className="contact-content">
         <form ref={formRef} className="contact-form" onSubmit={submitHandler}>
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="text" name="subject" placeholder="Subject" />
-          <input type="email" name="email" placeholder="Your Email" required />
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            autoComplete="name"
+            required
+          />
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            autoComplete="off"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            autoComplete="email"
+            required
+          />
           <textarea
             name="message"
             placeholder="Your Message"
+            autoComplete="off"
             required
           ></textarea>
           <button type="submit" className="submit-button">
