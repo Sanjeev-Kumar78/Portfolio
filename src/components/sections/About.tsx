@@ -109,7 +109,7 @@ const About = () => {
                     if (paragraph.includes("> ")) {
                       const lines = paragraph.split("\n");
                       return (
-                        <div key={index} className="paragraph-with-bullets">
+                        <ul key={index} className="paragraph-with-bullets">
                           {lines.map((line, lineIndex) => {
                             if (line.startsWith("> ")) {
                               return (
@@ -126,7 +126,7 @@ const About = () => {
                             }
                             return null;
                           })}
-                        </div>
+                        </ul>
                       );
                     } else {
                       // Regular paragraph
@@ -151,7 +151,7 @@ const About = () => {
             {ProfileData.about.interest &&
               ProfileData.about.interest.length > 0 && (
                 <div className="interests-section">
-                  <h4 className="interests-title">Interests & Passions</h4>
+                  <p className="interests-title">Interests & Passions</p>
                   <div className="interests-grid">
                     {ProfileData.about.interest.map((interest, index) => (
                       <span key={index} className="interest-tag">

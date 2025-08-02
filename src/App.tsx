@@ -1,23 +1,35 @@
 import NavBar from "./components/layout/NavBar";
-import About from "./components/sections/About";
-import Project from "./components/sections/Project";
 import Hero from "./components/sections/Hero";
-import ArrowUp from "./components/ui/ArrowUp";
-import Contact from "./components/sections/Contact";
-import Footer from "./components/layout/Footer";
 import SEO from "./components/SEO";
+import ArrowUp from "./components/ui/ArrowUp";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
+import { lazy, Suspense } from "react";
+
+// Lazy load components that are not immediately visible
+const About = lazy(() => import("./components/sections/About"));
+const Project = lazy(() => import("./components/sections/Project"));
+const Contact = lazy(() => import("./components/sections/Contact"));
+const Footer = lazy(() => import("./components/layout/Footer"));
+// Loading fallback component
+const ComponentLoader = ({ name }: { name: string }) => (
+  <div
+    className="component-loading"
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      minHeight: "200px",
+      opacity: 0.7,
+      fontSize: "14px",
+      color: "#a855f7",
+    }}
+  >
+    Loading {name}...
+  </div>
+);
 
 const App = () => {
-  // Set google site verification meta tag
-  document.head.insertAdjacentHTML(
-    "beforeend",
-    `<meta
-        name="google-site-verification"
-        content="${import.meta.env.GOOGLE_SITE_VERIFICATION || ""}"
-      />`
-  );
   return (
     <div>
       {/* Global SEO - will be applied to the entire site */}
@@ -43,12 +55,20 @@ const App = () => {
       <NavBar />
       <main>
         <Hero />
-        <About />
-        <Project />
-        <Contact />
+        <Suspense fallback={<ComponentLoader name="About Section" />}>
+          <About />
+        </Suspense>
+        <Suspense fallback={<ComponentLoader name="Projects" />}>
+          <Project />
+        </Suspense>
+        <Suspense fallback={<ComponentLoader name="Contact Form" />}>
+          <Contact />
+        </Suspense>
         <ArrowUp />
       </main>
-      <Footer />
+      <Suspense fallback={<ComponentLoader name="Footer" />}>
+        <Footer />
+      </Suspense>
     </div>
   );
 };
