@@ -96,7 +96,7 @@ export const ProfileData: ProfileData = {
     },
   },
   about: {
-    description: `I am a Computer Science Engineering student (CGPA 9.0) at KIIT who has experience in AI, machine learning, and work on full-stack development. I develop scalable applications that solve real-world problems and deliver tangible results. My work includes projects like:
+    description: `I am a Computer Science Engineering student (CGPA 9.0) at KIIT with hands-on experience in AI, machine learning, and full-stack development. I develop scalable applications that solve real-world problems and deliver tangible results. My work includes projects like:
 
 > Travel Itinerary Generator: 100 + monthly visitors
 > Book Recommendation System: A web application that recommends books based on user choice.
