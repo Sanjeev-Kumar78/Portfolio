@@ -43,11 +43,49 @@ const About = () => {
     },
   ];
 
-  // Set Head devicon cdn
+  // Set Head devicon cdn with preload and font-display
   useEffect(() => {
-    const deviconCDN = `<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />`;
+    // Preload the DevIcon CSS to improve loading
+    const preloadLink = document.createElement("link");
+    preloadLink.rel = "preload";
+    preloadLink.href =
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css";
+    preloadLink.as = "style";
+    preloadLink.onload = function () {
+      // Convert preload to stylesheet after loading
+      (this as HTMLLinkElement).onload = null;
+      (this as HTMLLinkElement).rel = "stylesheet";
+    };
+
     if (!document.querySelector('link[href*="devicon"]')) {
-      document.head.insertAdjacentHTML("beforeend", deviconCDN);
+      document.head.appendChild(preloadLink);
+    }
+
+    // Preload the font with font-display swap
+    const fontPreload = document.createElement("link");
+    fontPreload.rel = "preload";
+    fontPreload.href =
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/fonts/devicon.ttf";
+    fontPreload.as = "font";
+    fontPreload.type = "font/ttf";
+    fontPreload.crossOrigin = "anonymous";
+
+    if (!document.querySelector('link[href*="devicon.ttf"]')) {
+      document.head.appendChild(fontPreload);
+    }
+
+    // Add font-display CSS for better performance
+    const fontDisplayStyle = document.createElement("style");
+    fontDisplayStyle.textContent = `
+      @font-face {
+        font-family: 'devicon';
+        src: url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/fonts/devicon.ttf') format('truetype');
+        font-display: swap;
+      }
+    `;
+    if (!document.querySelector("style[data-devicon]")) {
+      fontDisplayStyle.setAttribute("data-devicon", "true");
+      document.head.appendChild(fontDisplayStyle);
     }
   }, []);
 
