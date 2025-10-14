@@ -190,6 +190,9 @@ const Contact = () => {
               alt="Laptop Boy"
               className="laptop-boy-image"
               loading="lazy"
+              width="200"
+              height="200"
+              decoding="async"
             />
           </div>
           <p className="social-links-text">

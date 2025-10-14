@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/portfolio.svg" />
 
-    <!-- Preconnect to external origins for faster loading -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="preconnect" href="https://github.com" crossorigin />
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
-    <link rel="dns-prefetch" href="https://github.com" />
+    <!-- Preload to external origins for faster loading -->
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net"
+      as="script"
+      crossorigin
+    />
+    <link rel="preload" href="https://github.com" as="script" crossorigin />
+
+    <!-- Preload critical font to improve contentful paint -->
+    <link rel="preload" href="https://github.com" as="script" crossorigin />
 
     <!-- Preload critical font to improve contentful paint -->
     <link
