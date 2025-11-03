@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/portfolio.svg" />
 
-    <!-- Preload to external origins for faster loading -->
-    <link
-      rel="preload"
-      href="https://cdn.jsdelivr.net"
-      as="script"
-      crossorigin
-    />
+    <!-- DNS Prefetch for external CDNs (faster DNS resolution) -->
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://api.emailjs.com" />
+
+    <!-- Preconnect to external origins for faster connection establishment -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://api.emailjs.com" crossorigin />
 
     <!-- Preload critical font to improve contentful paint -->
     <link
       rel="preload"
-      href="/src/assets/fonts/HARMONY.woff"
+      href="/fonts/HARMONY.woff"
       as="font"
-      type="font/woff2"
+      type="font/woff"
       crossorigin="anonymous"
     />
+
     <title>Sanjeev Kumar | Portfolio</title>
   </head>
   <body>

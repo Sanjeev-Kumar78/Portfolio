@@ -35,8 +35,13 @@ const NavBar = () => {
 
     setActiveSection(currentSection);
   };
+
   useEffect(() => {
-    handleScroll();
+    // Use requestAnimationFrame to avoid synchronous setState in effect
+    requestAnimationFrame(() => {
+      handleScroll();
+    });
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
