@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Harmony";
-  src: url("./assets/fonts/HARMONY.otf") format("opentype");
+  src: url("./assets/fonts/HARMONY.woff") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -43,10 +43,12 @@ html {
 
 body {
   background: #0c0000;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   min-height: 100vh;
   color: var(--color-primary-light);
   backdrop-filter: blur(10px);
-  font-family: "Inter", sans-serif;
   line-height: 1.5;
 }
 
