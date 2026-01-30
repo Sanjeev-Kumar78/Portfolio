@@ -281,7 +281,7 @@ projects: [
   {
     title: "Splitwise v2 CI/CD Pipeline",
     description:
-      "Built CI/CD for Splitwise v2 with GitHub Actions, Amazon EC2 deployment via SSM, and an on-instance script to orchestrate Docker releases behind Caddy. Includes Prometheus + Grafana monitoring and auto-updates the GitHub repo About website URL; architecture diagram shown in the project image.",
+      "Built CI/CD for Splitwise v2 with GitHub Actions, AWS EC2 deployment via SSM, and an on-instance script to orchestrate Docker releases behind Caddy. Includes Prometheus + Grafana monitoring and auto-updates the GitHub repo About website URL; architecture diagram shown in the project image.",
     imageUrl:
       "https://raw.githubusercontent.com/Sanjeev-Kumar78/splitwise-v2/main/Architecture_Diagram.png",
     liveUrl: "",
