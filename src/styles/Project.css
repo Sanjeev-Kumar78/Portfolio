@@ -251,6 +251,7 @@
   @apply text-gray-300 mb-4 leading-relaxed text-justify;
   text-rendering: optimizeSpeed;
   --project-description-line-height: 1.625em;
+  line-height: var(--project-description-line-height);
   max-height: calc(var(--project-description-line-height) * 3);
   display: -webkit-box;
   -webkit-line-clamp: 3;
