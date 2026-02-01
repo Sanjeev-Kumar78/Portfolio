@@ -250,9 +250,11 @@
 .project-description {
   @apply text-gray-300 mb-4 leading-relaxed text-justify;
   text-rendering: optimizeSpeed;
-  max-height: calc(1.625em * 3);
+  --project-description-line-height: 1.625em;
+  max-height: calc(var(--project-description-line-height) * 3);
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
