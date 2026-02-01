@@ -260,6 +260,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: var(--project-description-max-lines);
   line-clamp: var(--project-description-max-lines);
+  text-overflow: ellipsis;
   overflow: hidden;
 }
 
