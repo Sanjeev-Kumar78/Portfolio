@@ -268,7 +268,6 @@
 .project-card:focus-within .project-description {
   max-height: none;
   -webkit-line-clamp: unset;
-  line-clamp: unset;
   text-overflow: clip;
   overflow: visible;
 }
