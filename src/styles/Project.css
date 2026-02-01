@@ -255,6 +255,7 @@
   max-height: calc(var(--project-description-line-height) * 3);
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
