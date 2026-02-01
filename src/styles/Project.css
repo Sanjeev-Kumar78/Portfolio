@@ -254,7 +254,7 @@
   --project-description-max-lines: 3;
   line-height: var(--project-description-line-height);
   max-height: calc(
-    calc(var(--project-description-line-height) * 1em) *
+    var(--project-description-line-height) * 1em *
       var(--project-description-max-lines)
   );
   display: -webkit-box;
