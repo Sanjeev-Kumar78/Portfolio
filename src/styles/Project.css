@@ -251,11 +251,15 @@
   @apply text-gray-300 mb-4 text-justify;
   text-rendering: optimizeSpeed;
   --project-description-line-height: 1.625em;
+  --project-description-max-lines: 3;
   line-height: var(--project-description-line-height);
-  max-height: calc(var(--project-description-line-height) * 3);
+  max-height: calc(
+    var(--project-description-line-height) * var(--project-description-max-lines)
+  );
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: var(--project-description-max-lines);
+  line-clamp: var(--project-description-max-lines);
   overflow: hidden;
 }
 
