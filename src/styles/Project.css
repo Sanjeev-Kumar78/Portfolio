@@ -250,8 +250,7 @@
 .project-description {
   @apply text-gray-300 mb-4 leading-relaxed text-justify;
   text-rendering: optimizeSpeed;
-  line-height: 1.6;
-  max-height: calc(1.6em * 3);
+  max-height: calc(1.625em * 3);
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -261,7 +260,6 @@
 .project-card:hover .project-description {
   display: block;
   max-height: none;
-  -webkit-line-clamp: none;
   overflow: visible;
 }
 
