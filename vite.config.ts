@@ -1,13 +1,35 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
+// import { visualizer } from "rollup-plugin-visualizer";
+import viteCompression from "vite-plugin-compression";
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    react({
+      babel: {
+        plugins: ["babel-plugin-react-compiler"],
+      },
+    }),
+    tailwindcss(),
+    // visualizer({ open: true, filename: "stats.html" }),
+    // Brotli compression
+    viteCompression({
+      algorithm: "brotliCompress",
+      ext: ".br",
+      threshold: 1024,
+    }),
+    // Gzip compression
+    viteCompression({
+      algorithm: "gzip",
+      ext: ".gz",
+      threshold: 1024,
+    }),
+  ],
 
   build: {
     target: "esnext",
+    minify: "esbuild",
     rollupOptions: {
       output: {
         manualChunks(id) {
