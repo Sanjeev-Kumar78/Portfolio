@@ -1,4 +1,4 @@
-﻿@import "tailwindcss";
+﻿@reference "tailwindcss";
 
 /* CSS Variables for common values */
 :root {
@@ -31,7 +31,7 @@
 
 /* Main Container */
 .about-container {
-  @apply min-h-[100dvh] max-h-max text-white relative overflow-hidden px-4 py-16 md:py-20;
+  @apply min-h-dvh max-h-max text-white relative overflow-hidden px-4 py-16 md:py-20;
   background: linear-gradient(
     135deg,
     #0a0a0a 0%,
@@ -364,7 +364,7 @@
 }
 
 .skill-name {
-  @apply text-sm font-medium relative z-10 break-words leading-tight;
+  @apply text-sm font-medium relative z-10 wrap-break-word leading-tight;
 }
 
 /* Responsive Design with Enhanced Mobile Experience */

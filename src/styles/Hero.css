@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@reference "tailwindcss";
 .hero-container {
   @apply relative flex h-dvh w-full items-center justify-center overflow-hidden;
   /* Ensure no content escapes the container */
@@ -13,7 +13,9 @@
   @apply absolute -z-10 h-[400px] w-[600px] rounded-full;
   @apply md:h-[500px] md:w-[800px];
   filter: blur(100px);
-  will-change: transform;
+  will-change: auto;
+  animation-delay: 0.1s;
+  animation-fill-mode: both;
 }
 
 .hero-container::before {
@@ -55,12 +57,16 @@
   }
 }
 
+@keyframes slide-up {
+  from { transform: translateY(20px); }
+  to   { transform: translateY(0); }
+}
+
+
 /* --- Hero Content --- */
 .hero-content {
   @apply relative z-10 flex flex-col items-center text-center px-4;
-  opacity: 1;
-  transform: translateY(0);
-  animation: fade-in-up 1s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+  animation: slide-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
 }
 
 .hero-pre-title {
@@ -136,7 +142,7 @@
 /* --- Call to Action Buttons --- */
 .hero-cta {
   @apply mt-8 flex flex-col gap-4 sm:flex-row sm:gap-6;
-  animation: fade-in-up 1s cubic-bezier(0.4, 0, 0.2, 1) 0.8s both;
+  animation: fade-in-up 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
 }
 
 .hero-cta button {

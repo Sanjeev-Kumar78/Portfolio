@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@reference "tailwindcss";
 
 .social-button {
   @apply flex items-center justify-center rounded-xl border p-4 text-white shadow-lg backdrop-blur-sm transition-all duration-300 ease-in-out;

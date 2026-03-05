@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@reference "tailwindcss";
 .project-container {
   @apply relative flex flex-col items-center min-h-screen py-20 px-4 overflow-hidden;
   background: radial-gradient(
@@ -176,7 +176,7 @@
 }
 
 .project-card {
-  @apply relative overflow-hidden transition-all duration-500 hover:scale-[1.02] flex flex-col h-[100%] backdrop-blur-[20px] rounded-3xl;
+  @apply relative overflow-hidden transition-all duration-500 hover:scale-[1.02] flex flex-col h-full backdrop-blur-[20px] rounded-3xl;
   /* Background */
   @apply bg-[linear-gradient(145deg,rgba(30,30,45,0.85)0%,rgba(40,25,55,0.8)100%),linear-gradient(rgba(88,28,135,0.08)0%,rgba(59,7,100,0.12)100%)];
   border: 1px solid rgba(168, 85, 247, 0.25);
@@ -259,7 +259,7 @@
   );
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: var(--project-description-max-lines);
+  line-clamp: var(--project-description-max-lines);
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -267,7 +267,7 @@
 .project-card:hover .project-description,
 .project-card:focus-within .project-description {
   max-height: none;
-  -webkit-line-clamp: unset;
+  line-clamp: unset;
   text-overflow: clip;
   overflow: visible;
 }
