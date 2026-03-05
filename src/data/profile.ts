@@ -278,6 +278,28 @@ projects: [
     projectdomain: "Web Development",
     status: "Completed",
   },
+  {
+    title: "Splitwise v2 CI/CD Pipeline",
+    description:
+      "Designed and implemented an end-to-end CI/CD pipeline using GitHub Actions to build and deploy Dockerized services to AWS EC2 via SSM, enabling zero-downtime releases behind Caddy. Automated on-instance release orchestration with custom scripts, integrated Prometheus & Grafana for real-time monitoring, and implemented metadata automation to dynamically update the GitHub repository About website URL. Includes a complete architecture diagram documenting deployment, networking, and observability flow.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Sanjeev-Kumar78/splitwise-v2/main/Architecture_Diagram.png",
+    liveUrl: "",
+    sourceUrl: "https://github.com/Sanjeev-Kumar78/splitwise-v2",
+    skillsUsed: [
+      "Docker",
+      "Caddy",
+      "Prometheus",
+      "Grafana",
+      "Java",
+      "Spring Boot",
+      "GitHub Actions",
+      "AWS EC2",
+      "SSM",
+    ],
+    projectdomain: "DevOps & Backend",
+    status: "Completed",
+  },
 {
   title: "Expense Manager",
   description:
