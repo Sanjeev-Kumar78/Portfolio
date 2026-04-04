@@ -1,16 +1,23 @@
+# Robots.txt
+
 User-agent: *
 Allow: /
+Allow: /Projects_Banner/
+Allow: /fonts/
 
 # Sitemap
 Sitemap: https://sanjeev-kumar78.vercel.app/sitemap.xml
 
-# Block common bot paths that aren't needed
-Disallow: /api/
-Disallow: /_next/
-Disallow: /admin/
-Disallow: /private/
+# Block paths that don't need indexing
+Disallow: /node_modules/
+Disallow: /.env
+Disallow: /.env.local
+Disallow: /.git
+Disallow: /__pycache__/
+Disallow: /.next/
+Disallow: /.vercel/
 
-# Allow all crawlers to access CSS and JS files
+# Allow common asset types
 Allow: *.css
 Allow: *.js
 Allow: *.png
@@ -19,6 +26,34 @@ Allow: *.jpeg
 Allow: *.gif
 Allow: *.svg
 Allow: *.webp
+Allow: *.woff
+Allow: *.woff2
 
-# Crawl delay (optional)
+# Specific crawler rules for popular job boards and recruitment sites
+User-agent: LinkedInBot
+Allow: /
+Allow: /projects/
+Allow: /about/
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+User-agent: Bingbot
+Allow: /
 Crawl-delay: 1
+
+User-agent: AhrefsBot
+Allow: /
+Disallow: /admin
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+# Standard crawl delay for other bots
+User-agent: *
+Crawl-delay: 1
+Request-rate: 1/5
