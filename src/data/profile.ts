@@ -292,7 +292,7 @@ projects: [
       "TypeScript",
       "MongoDB",
       "Redis",
-      "Gemini AI",
+      "Gemini API",
       "Docker",
     ],
     projectdomain: "Full Stack Development & AI",
