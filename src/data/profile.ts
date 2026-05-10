@@ -81,7 +81,7 @@ interface ProfileData {
 export const ProfileData: ProfileData = {
   personal: {
     name: "Sanjeev Kumar",
-    title: "Full-Stack Developer | AI Engineer",
+    title: "Full-Stack Developer",
     tagline: "Building production-ready software with measurable impact.",
     location: "N/A",
     photoUrl: "https://example.com/photo.jpg",
@@ -113,13 +113,11 @@ export const ProfileData: ProfileData = {
 ## Collaboration Style
 I value clean architecture, ownership, and clear communication. I enjoy working with product and engineering teams to deliver practical solutions that solve real user problems and are easy to maintain long term.`,
     interest: [
-      "Scalable Web Apps",
-      "AI Features",
-      "Backend APIs",
-      "Cloud and DevOps",
+      "Web Development",
+      "Cloud & DevOps",
+      "Data Science",
       "Open Source",
-      "Performance Engineering",
-      "Product Design",
+      "Programming"
     ],
   },
   skills: {

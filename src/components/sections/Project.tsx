@@ -21,24 +21,26 @@ const Project = () => {
               
               <div className="project-links">
                 {project.liveUrl && (
-                  <button
-                    onClick={() => window.open(project.liveUrl, '_blank', 'noopener,noreferrer')}
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="project-link"
                     aria-label={`View live demo of ${project.title}`}
-                    type="button"
                   >
                     🚀 Live Demo
-                  </button>
+                  </a>
                 )}
                 {project.sourceUrl && (
-                  <button
-                    onClick={() => window.open(project.sourceUrl, '_blank', 'noopener,noreferrer')}
+                  <a
+                    href={project.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="project-link"
                     aria-label={`View source code of ${project.title}`}
-                    type="button"
                   >
                     📋 Source Code
-                  </button>
+                  </a>
                 )}
               </div>
               
