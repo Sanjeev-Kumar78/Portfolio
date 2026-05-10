@@ -281,7 +281,7 @@ projects: [
   {
     title: "StyleO",
     description:
-      "An intelligent digital closet and outfit recommendation platform with wardrobe state tracking, AI-powered garment understanding, and personalized outfit suggestions.",
+      "An intelligent digital closet and outfit recommendation platform featuring wardrobe state tracking (clean/dirty/worn), portrait-to-garment extraction with background removal, and personalized AI outfit recommendations based on user preferences.",
     imageUrl:
       "https://github.com/user-attachments/assets/67b56559-43bd-4533-8eea-2c1512e24d05",
     liveUrl: "https://styleo.vercel.app",
