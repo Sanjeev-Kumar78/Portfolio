@@ -279,6 +279,26 @@ projects: [
     status: "Completed",
   },
   {
+    title: "StyleO",
+    description:
+      "An intelligent digital closet and outfit recommendation platform with wardrobe state tracking, AI-powered garment understanding, and personalized outfit suggestions.",
+    imageUrl:
+      "https://github.com/user-attachments/assets/67b56559-43bd-4533-8eea-2c1512e24d05",
+    liveUrl: "https://styleo.vercel.app",
+    sourceUrl: "https://github.com/Sanjeev-Kumar78/StyleO",
+    skillsUsed: [
+      "FastAPI",
+      "React",
+      "TypeScript",
+      "MongoDB",
+      "Redis",
+      "Gemini AI",
+      "Docker",
+    ],
+    projectdomain: "Full Stack Development & AI",
+    status: "In Progress",
+  },
+  {
     title: "Splitwise v2 CI/CD Pipeline",
     description:
       "Designed and implemented an end-to-end CI/CD pipeline using GitHub Actions to build and deploy Dockerized services to AWS EC2 via SSM, enabling zero-downtime releases behind Caddy. Automated on-instance release orchestration with custom scripts, integrated Prometheus & Grafana for real-time monitoring, and implemented metadata automation to dynamically update the GitHub repository About website URL. Includes a complete architecture diagram documenting deployment, networking, and observability flow.",
